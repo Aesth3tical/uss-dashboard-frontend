@@ -1,25 +1,30 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import { Switch, Route } from 'react-router-dom';
+import {
+  DashboardPage,
+  HomePage,
+  LandingPage,
+  DashboardNotFound,
+  AdminPage,
+  AdminInvites,
+  MEDPage,
+  ItemManagement
+} from './pages'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Switch>
+      <Route path="/" exact={true} component={LandingPage} />
+      <Route path="/home" exact={true} component={HomePage} />
+      <Route path="/dashboard/:id" exact={true} component={DashboardPage} />
+      <Route path="/dashboard" exact={true} component={DashboardNotFound} />
+      <Route path="/home/admin" exact={true} component={AdminPage} />
+      <Route path="/home/admin/invites" exact={true} component={AdminInvites} />
+      <Route path="/home/med" exact={true} component={MEDPage}/>
+      <Route path="/home/med/item-management" exact={true} component={ItemManagement}/>
+    </Switch>
+  )
 }
 
 export default App;
