@@ -5,7 +5,7 @@ import { addEmployee } from '../../utils/api';
 import { Link } from 'react-router-dom';
 import { Button } from '@chakra-ui/react';
 
-export function DashboardPage({ history, match }) {
+export function ItemPage({ history, match }) {
     const [user, setUser] = React.useState(null);
     const [loading, setLoading] = React.useState(true);
     const [employee, setEmployee] = React.useState('Input employee\'s Discord userID here')
@@ -22,7 +22,7 @@ export function DashboardPage({ history, match }) {
             setLoading(false)
         }).catch((err) => {
             console.log(err)
-            history.push('/dashboard');
+            history.push('/');
             setLoading(false);
         })
     }, [])

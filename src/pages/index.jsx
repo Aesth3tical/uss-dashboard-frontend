@@ -17,3 +17,4 @@ export { AdminInvites } from './Admin/AdminInvites';
 // MED pages
 export { MEDPage } from './MED/MEDLanding';
 export { ItemManagement } from './MED/ItemManagement';
+export { ItemPage } from './ItemPage';

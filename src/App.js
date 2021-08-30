@@ -9,7 +9,8 @@ import {
   AdminPage,
   AdminInvites,
   MEDPage,
-  ItemManagement
+  ItemManagement,
+  ItemPage
 } from './pages'
 
 function App() {
@@ -21,8 +22,9 @@ function App() {
       <Route path="/dashboard" exact={true} component={DashboardNotFound} />
       <Route path="/home/admin" exact={true} component={AdminPage} />
       <Route path="/home/admin/invites" exact={true} component={AdminInvites} />
-      <Route path="/home/med" exact={true} component={MEDPage}/>
-      <Route path="/home/med/item-management" exact={true} component={ItemManagement}/>
+      <Route path="/home/med" exact={true} component={MEDPage} />
+      <Route path="/home/med/item-management" exact={true} component={ItemManagement} />
+      <Route path="/home/med/item-management/:item" exact={true} component={ItemPage} />
     </Switch>
   )
 }

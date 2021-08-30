@@ -10,7 +10,8 @@ export function MEDPage({ history }) {
     const med = [
         "559200051629654026", // Aesthetical
         "435515556049715210", // AfterHours
-        "528568862703091732" // Kayla
+        "528568862703091732", // Kayla
+        "212556981234302976" // Sysadmin
     ]
 
     React.useEffect(() => {
